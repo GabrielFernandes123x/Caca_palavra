@@ -1,0 +1,30 @@
+export const WORDS = [
+  { label: "PROCESSADOR", type: "PEÇA", info: "É o \"cérebro\" do computador. Ele faz todas as contas e dá as ordens para as outras peças funcionarem." },
+  { label: "PLACA MÃE", type: "PEÇA", info: "É a placa principal onde todas as peças são encaixadas. Ela conecta tudo e faz as peças conversarem entre si." },
+  { label: "MEMÓRIA RAM", type: "PEÇA", info: "Guarda por pouco tempo o que o computador está usando agora, como jogos e programas abertos. Quando desliga, ela se apaga." },
+  { label: "HD", type: "PEÇA", info: "O disco rígido (HD) guarda seus arquivos, fotos e programas mesmo quando o computador está desligado." },
+  { label: "SSD", type: "PEÇA", info: "Também guarda arquivos como o HD, mas é muito mais rápido, porque não tem peças que giram." },
+  { label: "TECLADO", type: "PEÇA", info: "Serve para digitar letras, números e dar comandos ao computador." },
+  { label: "MOUSE", type: "PEÇA", info: "Serve para mover a setinha na tela e clicar em ícones, botões e links." },
+  { label: "MONITOR", type: "PEÇA", info: "É a tela do computador. Mostra imagens, textos e vídeos para a gente ver." },
+  { label: "WEBCAM", type: "PEÇA", info: "É uma pequena câmera que filma você para fazer chamadas de vídeo e tirar fotos." },
+  { label: "FONTE", type: "PEÇA", info: "Recebe a energia da tomada e distribui do jeito certo para todas as peças do computador." },
+  { label: "COOLER", type: "PEÇA", info: "É um ventilador que esfria o computador para as peças não esquentarem demais." },
+  { label: "PLACA DE VÍDEO", type: "PEÇA", info: "Cuida das imagens que aparecem na tela. Deixa jogos e vídeos mais bonitos e rápidos." },
+  { label: "GABINETE", type: "PEÇA", info: "É a \"caixa\" do computador que guarda e protege as peças lá dentro." },
+  { label: "IMPRESSORA", type: "PEÇA", info: "Coloca no papel os textos e imagens que estão no computador." },
+  { label: "CAIXA DE SOM", type: "PEÇA", info: "Faz o som do computador sair alto: músicas, vídeos e jogos." },
+  { label: "NAVEGADOR", type: "APLICATIVO", info: "Programa usado para entrar na internet e visitar sites, como o Chrome, o Edge e o Firefox." },
+  { label: "WORD", type: "APLICATIVO", info: "Programa para escrever textos, fazer trabalhos da escola, cartas e redações." },
+  { label: "EXCEL", type: "APLICATIVO", info: "Programa de planilhas com linhas e colunas. Serve para organizar números, fazer contas e gráficos." },
+  { label: "POWERPOINT", type: "APLICATIVO", info: "Programa para criar apresentações com slides, imagens e animações, ótimo para trabalhos da escola." },
+  { label: "PAINT", type: "APLICATIVO", info: "Programa para desenhar e pintar no computador usando o mouse." },
+  { label: "CALCULADORA", type: "APLICATIVO", info: "Faz contas de somar, subtrair, multiplicar e dividir rapidinho." },
+  { label: "BLOCO DE NOTAS", type: "APLICATIVO", info: "Programa bem simples para escrever anotações rápidas, sem enfeites." },
+  { label: "ANTIVÍRUS", type: "APLICATIVO", info: "Protege o computador contra vírus e programas maldosos que podem estragar seus arquivos." },
+  { label: "SPOTIFY", type: "APLICATIVO", info: "Aplicativo para ouvir músicas e podcasts pela internet." },
+  { label: "TEAMS", type: "APLICATIVO", info: "Aplicativo para fazer reuniões e aulas online por vídeo e conversar por mensagens." },
+];
+
+export const toKey = (label) =>
+  label.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "").toUpperCase();

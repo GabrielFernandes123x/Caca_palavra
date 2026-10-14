@@ -1,0 +1,125 @@
+{
+  "project_name": "Caça-Palavras Tech - Edição Peças e Aplicativos de PC",
+  "app_type": "single-page educational game",
+  "target_audience": "Alunos do Ensino Fundamental (7-12 anos)",
+  "language": "pt-BR",
+  "theme": "Vibrant Playful Neon-Tech / Arcade Educativo",
+  "typography": {
+    "heading_font": "Fredoka, Nunito, sans-serif",
+    "body_font": "Plus Jakarta Sans, Inter, sans-serif",
+    "monospace_grid_font": "JetBrains Mono, Fira Code, monospace",
+    "heading_styles": {
+      "h1": "text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white uppercase drop-shadow-sm",
+      "h2": "text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-slate-800 dark:text-slate-100",
+      "h3": "text-lg sm:text-xl font-bold text-slate-700 dark:text-slate-200"
+    },
+    "uppercase_rule": "CRITICAL: Todas as letras no grid e na lista de palavras DEVEM ser 100% em MAIÚSCULAS."
+  },
+  "colors": {
+    "primary": "#4F46E5",
+    "primary_hover": "#4338CA",
+    "secondary": "#06B6D4",
+    "accent_gold": "#F59E0B",
+    "accent_green": "#10B981",
+    "accent_purple": "#8B5CF6",
+    "background_light": "#F8FAFC",
+    "background_dark": "#0F172A",
+    "grid_bg": "#FFFFFF",
+    "grid_cell_default": "#F1F5F9",
+    "grid_cell_selected": "#818CF8",
+    "grid_cell_found": "#34D399",
+    "word_strike_color": "#059669"
+  },
+  "game_rules_and_features": {
+    "total_words": 25,
+    "words_categories": {
+      "HARDWARE": [
+        "PROCESSADOR",
+        "PLACA MAE",
+        "MEMORIA RAM",
+        "DISCO RIGIDO",
+        "TECLADO",
+        "MOUSE",
+        "MONITOR",
+        "WEBCAM",
+        "FONTE",
+        "COOLER",
+        "PLACA DE VIDEO",
+        "GABINETE",
+        "FONE",
+        "IMPRESSORA",
+        "ESTABILIZADOR"
+      ],
+      "APLICATIVOS": [
+        "NAVEGADOR",
+        "WORD",
+        "EXCEL",
+        "POWERPOINT",
+        "PAINT",
+        "CALCULADORA",
+        "BLOCO DE NOTAS",
+        "ANTIVIRUS",
+        "SPOTIFY",
+        "TEAMS"
+      ]
+    },
+    "allowed_directions": [
+      "horizontal (esquerda para direita)",
+      "vertical (cima para baixo)",
+      "diagonal (diagonal descendente)"
+    ],
+    "no_reverse": true,
+    "key_functionalities": [
+      "Grade Interativa de Caça-Palavras com suporte a clique e arrasto (mouse/touch) com feedback de seleção visual",
+      "Sorteio dinâmico de nova grade a cada nova partida",
+      "Painel lateral de palavras dividida por Hardware e Aplicativos com risco automático (line-through / badge verde) quando encontrada",
+      "Card/Modal Educativo explicativo imediato quando a palavra é encontrada, descrevendo a função do componente ou aplicativo de forma infantil e didática em Português",
+      "Cronômetro de tempo decorrido (MM:SS) e contador de progresso (X de 25 encontradas)",
+      "Sistema de Dicas (Hint) iluminando temporariamente a primeira letra de uma palavra ainda não achada",
+      "Ranking de Jogadores com nome e tempo salvo em localStorage e com backend opcional",
+      "Tela/Modal de Vitória com animação de confete (canvas-confetti / framer-motion), classificação por estrelas, input para nome do aluno e salvamento automático de pontuação"
+    ]
+  },
+  "layout_strategy": {
+    "container": "max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8",
+    "grid_mode": "Bento Asymmetric Layout: Grade do jogo em destaque no lado esquerdo/centro (col-span-12 lg:col-span-7) e Painel Lateral no lado direito (col-span-12 lg:col-span-5)",
+    "responsive_behavior": "Em telas pequenas (mobile), a grade fica no topo com controle de scroll touch desabilitado no canvas de seleção, e a lista de palavras fica logo abaixo em formato expansível/compacto"
+  },
+  "testing_and_data_ids": {
+    "data_testid_rules": "Todos os elementos interativos e informativos DEVEM possuir o atributo data-testid em kebab-case.",
+    "required_test_ids": [
+      "game-title",
+      "timer-display",
+      "words-found-counter",
+      "new-game-button",
+      "hint-button",
+      "word-search-grid",
+      "grid-cell-{row}-{col}",
+      "word-list-panel",
+      "word-item-{word}",
+      "explanation-modal",
+      "explanation-modal-close-button",
+      "victory-modal",
+      "player-name-input",
+      "save-score-button",
+      "leaderboard-button",
+      "leaderboard-modal",
+      "leaderboard-item-{index}"
+    ]
+  },
+  "image_urls": {
+    "hero_setup": "https://images.unsplash.com/photo-1626218174358-7769486c4b79?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxjb21wdXRlciUyMGhhcmR3YXJlJTIwY29tcG9uZW50cyUyMHNldHVwJTIwZ2FtaW5nJTIwa2V5Ym9hcmQlMjBtb3VzZSUyMG1vbml0b3IlMjBjcHV8ZW58MHx8fHwxNzkyMDAxNDgwfDA&ixlib=rb-4.1.0&q=85",
+    "rgb_gaming_pc": "https://images.unsplash.com/photo-1696710257827-75e2e5954059?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHw0fHxjb21wdXRlciUyMGhhcmR3YXJlJTIwY29tcG9uZW50cyUyMHNldHVwJTIwZ2FtaW5nJTIwa2V5Ym9hcmQlMjBtb3VzZSUyMG1vbml0b3IlMjBjcHV8ZW58MHx8fHwxNzkyMDAxNDgwfDA&ixlib=rb-4.1.0&q=85"
+  },
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Usar React JS e Tailwind CSS sem TypeScript (.js e .jsx).",
+    "Manter todas as letras do caça-palavras e da lista 100% em MAIÚSCULAS conforme exigência do usuário.",
+    "Garantir que os direções do caça-palavras sejam SOMENTE horizontal, vertical e diagonal (sem palavras invertidas).",
+    "Infundir micro-interações, sombras neon leves, bordas arredondadas e cores alegres apropriadas para o público infantil do ensino fundamental.",
+    "Garantir contraste acessível WCAG AA e navegação fluida.",
+    "Incluir obrigatoriamente data-testid em todos os elementos interativos conforme documentado."
+  ]
+},
+overwrite: true,
+path: "/app/design_guidelines.json"
+}

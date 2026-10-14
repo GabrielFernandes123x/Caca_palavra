@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=JetBrains+Mono:wght@600;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+
+.font-heading { font-family: 'Fredoka', sans-serif; }
+.font-body { font-family: 'Plus Jakarta Sans', sans-serif; }
+.font-grid { font-family: 'JetBrains Mono', monospace; }
+
+.bg-dots {
+  background-image: radial-gradient(#e2d9c5 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-rise { animation: rise 0.5s ease-out both; }
